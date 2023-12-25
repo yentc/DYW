@@ -1,0 +1,27 @@
+<div class="container notification_form px-4 " style="margin-top: 5%; margin-bottom: 200px;">
+    <form>
+        <div class="row">
+            <p class="text-center title" style="margin-bottom: 80px;">認證信訊息</p>
+            <img src="./images/email_right.png" alt="認證信件icon" style="width: 160px; margin: 0 auto; ">
+            <p class=" mt-5 text-center fw-bold fs-4" style="margin-bottom: 50px; line-height: 1.5rem;">
+                已確認您的信件，系統將發送成案通知信至此信箱。</p>
+            <div class="col-md-12 d-flex justify-content-center">
+                <button type="button" class="btn main_orange " onclick="changeForm('index')">回首頁</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script>
+    //email錯誤
+    $('#email').on('input', function () {
+        if ($(this).val() == '') {
+            $(this).removeClass('error')
+            $('.JQ_error_text').hide();
+        } else {
+            $(this).addClass('error')
+            $('.JQ_error_text').show();
+        }
+    })
+
+</script>
