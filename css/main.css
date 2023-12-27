@@ -101,18 +101,17 @@ body{
     margin-left: 2.5rem;
 }
 /*container.S*/
-/* @media (min-width: 1400px){
+@media (min-width: 1400px){
     .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-        max-width: 960px;
+        max-width: 1140px;
     }
-    
 }
 @media (min-width: 1200px){
     .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-        max-width: 960px;
+        max-width: 1140px;
     }
     
-} */
+}
 /*container.E*/
 /***************共用的東西.end******************/
 
@@ -183,7 +182,29 @@ footer ul li p,a{
     font-size: 1rem;
     letter-spacing: 1px;
     line-height: 2rem;
+}
 
+footer::before{
+    content: '';
+    background-image: url(../images/01.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 483px;
+    height: 483px;
+}
+footer::after{
+    content: '';
+    background-image: url(../images/01.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 483px;
+    height: 483px;
 }
 
 /*筆電*/	
