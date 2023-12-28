@@ -253,9 +253,10 @@ h2.title{
 }
 h2.title::before{
     content: '';
+    position: absolute;
     width: 35px;
     height: 35px;
-    top: 0;
+    top: 2px;
     left: 0;
     background-image: url('../images/title_flower.png');
     background-position: center;
