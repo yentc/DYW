@@ -53,6 +53,7 @@ table {
 }
 a{
 	text-decoration: none;
+    color: var(--black);
 }
 a:hover {
     color: var(--primary);
@@ -103,6 +104,17 @@ body{
 .transform180{
     transform: rotateX(180deg);
 }
+/*背景.S*/
+.base{
+    position: relative;
+}
+.base .bg{
+    position: absolute;
+    object-fit: cover;
+    bottom: 0;
+    width: 100%;
+}
+/*背景.E*/
 
 /*container.S*/
 @media (min-width: 1400px){
@@ -245,6 +257,23 @@ footer .footer_flower2{
 
 
 /***************首頁.S****************/
+.marquee {
+    padding: 0;
+    box-shadow: 0 0 10px #afafaf;
+    border-radius: 15px;
+    height: 75px;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+.marquee .title {
+    width: 30%;
+    padding: 0 40px;
+    background-color: white;
+    color: var(--primary);
+    border-radius: 15px 0 0 15px;
+    font-weight: 900;
+    font-size: 2.5rem;
+}
 h2.title{
     position: relative;
     font-weight: 900;
