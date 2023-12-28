@@ -27,7 +27,7 @@
     <div class="row mb-3">
         <div class="col-md-6">
             <h2 class="title">
-                <span class="ms-5">節目</span>
+                <span class="ms-5">節目</span>預告
             </h2>
             <div class="program_carousel">
                 <div class="">
@@ -46,20 +46,20 @@
         </div>
         <div class="col-md-6">
             <h2 class="title">
-                <span class="ms-5">節目</span>
+                節目
             </h2>
             <div class="program_carousel">
                 <div class="">
-                    <img src="./images/default.png" alt=""  class="w-100">
+                    <img src="./images/default.png" alt="">
                 </div>
                 <div class="">
-                    <img src="./images/default.png" alt=""  class="w-100">
+                    <img src="./images/default.png" alt="">
                 </div>
                 <div class="">
-                    <img src="./images/default.png" alt=""  class="w-100">
+                    <img src="./images/default.png" alt="">
                 </div>
                 <div class="">
-                    <img src="./images/default.png" alt=""  class="w-100">
+                    <img src="./images/default.png" alt="">
                 </div>
             </div>
         </div>
@@ -82,5 +82,12 @@
     $('.program_carousel').slick({
         dots: true,
         speed: 300,
+    });
+    $('.sale_carousel').slick({
+        dots: true,
+        speed: 300,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
     });
 </script>
