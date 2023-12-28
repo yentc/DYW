@@ -27,7 +27,7 @@
     <div class="row mb-3">
         <div class="col-md-6">
             <h2 class="title">
-                節目
+                節目預告
             </h2>
             <div class="program_carousel">
                 <div class="">
@@ -46,21 +46,39 @@
         </div>
         <div class="col-md-6">
             <h2 class="title">
-                節目
+                慈善義賣
             </h2>
-            <div class="program_carousel">
-                <div class="">
-                    <img src="./images/default.png" alt="">
-                </div>
-                <div class="">
-                    <img src="./images/default.png" alt="">
-                </div>
-                <div class="">
-                    <img src="./images/default.png" alt="">
-                </div>
-                <div class="">
-                    <img src="./images/default.png" alt="">
-                </div>
+            <div class="sale_carousel">
+                <a href="" class="card m-1">
+                    <img src="/images/medical-stone.gif" class="card-img-top p-2" alt="">
+                    <div class="card-body">
+                        <p class="card-text">麥飯石</p>
+                    </div>
+                </a>
+                <a href="" class="card m-1">
+                    <img src="/images/10.gif" class="card-img-top p-2" alt="">
+                    <div class="card-body">
+                        <p class="card-text">引擎保護劑</p>
+                    </div>
+                </a>
+                <a href="" class="card m-1">
+                    <img src="/images/cofe.gif" class="card-img-top p-2" alt="">
+                    <div class="card-body">
+                        <p class="card-text">低因有機精品咖啡</p>
+                    </div>
+                </a>
+                <a href="" class="card m-1">
+                    <img src="/images/tea.gif" class="card-img-top p-2" alt="">
+                    <div class="card-body">
+                        <p class="card-text">高兒茶素-羽冠茶</p>
+                    </div>
+                </a>
+                <a href="" class="card m-1">
+                    <img src="/images/16.png" class="card-img-top p-2" alt="">
+                    <div class="card-body">
+                        <p class="card-text">道緣五明機油</p>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
@@ -82,5 +100,12 @@
     $('.program_carousel').slick({
         dots: true,
         speed: 300,
+    });
+    $('.sale_carousel').slick({
+        dots: true,
+        speed: 300,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
     });
 </script>
