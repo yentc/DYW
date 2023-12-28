@@ -1,69 +1,70 @@
-<section class="links_banner">
-    <div class="container p-4">
-        <div class="row">
-            <div class="col-12 mb-5">
-                <h2>
-                    <span>嘉義縣政府</span>
-                    <p>線上陳情系統</p>
-                </h2>
+<div class="container p-4">
+    <div class="row mb-5">
+        <div class="col-md-12">
+            <div class="main_carousel">
+                <div class="main_img">
+                    <img src="./images/home_img_01.png" alt="">
+                </div>
+                <div class="main_img">
+                    <img src="./images/home_img_02.png" alt="">
+                </div>
+                <div class="main_img">
+                    <img src="./images/home_img_03.png" alt="">
+                </div>
+                <div class="main_img">
+                    <img src="./images/home_img_04.png" alt="">
+                </div>
+                <div class="main_img">
+                    <img src="./images/home_img_05.png" alt="">
+                </div>
+                <div class="main_img">
+                    <img src="./images/home_img_06.png" alt="">
+                </div>
             </div>
-            <div class="col-12 mb-5">
-                <h2>
-                    <span>嘉義縣政府</span>
-                    <p>線上陳情系統</p>
-                </h2>
+        </div>
+        
+    </div>
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <h2 class="title">
+                節目
+            </h2>
+            <div class="program_carousel">
+                <div class="">
+                    <img src="./images/default.png" alt="" class="w-100">
+                </div>
+                <div class="">
+                    <img src="./images/default.png" alt="" class="w-100">
+                </div>
+                <div class="">
+                    <img src="./images/default.png" alt="" class="w-100">
+                </div>
+                <div class="">
+                    <img src="./images/default.png" alt="" class="w-100">
+                </div>
             </div>
-            <div class="col-12 mb-5">
-                <h2>
-                    <span>嘉義縣政府</span>
-                    <p>線上陳情系統</p>
-                </h2>
-            </div>
-            <div class="col-12 mb-5">
-                <h2>
-                    <span>嘉義縣政府</span>
-                    <p>線上陳情系統</p>
-                </h2>
-            </div>
-            <div class="col-12 mb-5">
-                <h2>
-                    <span>嘉義縣政府</span>
-                    <p>線上陳情系統</p>
-                </h2>
-            </div>
-            <div class="col-12 mb-5">
-                <h2>
-                    <span>嘉義縣政府</span>
-                    <p>線上陳情系統</p>
-                </h2>
-            </div>
-            <div class="col-12 mb-5">
-                <h2>
-                    <span>嘉義縣政府</span>
-                    <p>線上陳情系統</p>
-                </h2>
-            </div>
-            <div class="col-12 mb-5">
-                <h2>
-                    <span>嘉義縣政府</span>
-                    <p>線上陳情系統</p>
-                </h2>
-            </div>
-            <div class="col-12 mb-5">
-                <h2>
-                    <span>嘉義縣政府</span>
-                    <p>線上陳情系統</p>
-                </h2>
-            </div>
-            <div class="col-12 mb-5">
-                <h2>
-                    <span>嘉義縣政府</span>
-                    <p>線上陳情系統</p>
-                </h2>
+        </div>
+        <div class="col-md-6">
+            <h2 class="title">
+                節目
+            </h2>
+            <div class="program_carousel">
+                <div class="">
+                    <img src="./images/default.png" alt="">
+                </div>
+                <div class="">
+                    <img src="./images/default.png" alt="">
+                </div>
+                <div class="">
+                    <img src="./images/default.png" alt="">
+                </div>
+                <div class="">
+                    <img src="./images/default.png" alt="">
+                </div>
             </div>
         </div>
     </div>
-</section>
+</div>
 
 
 
@@ -72,4 +73,14 @@
     //aos
     AOS.init();
     //滾動視差
+
+    $('.main_carousel').slick({
+        dots: true,
+        speed: 300,
+    });
+    
+    $('.program_carousel').slick({
+        dots: true,
+        speed: 300,
+    });
 </script>

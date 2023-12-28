@@ -13,6 +13,8 @@
     <link rel="shortcut icon" href="./images/favicon-16x16.png" />
     <link type="text/css" href="./plugins/bootstrapv5/css/bootstrap.min.css" rel="stylesheet">
     <link href="./plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./plugins/slick-1.8.1/slick.css" rel="stylesheet">
+    <link href="./plugins/slick-1.8.1/slick-theme.css" rel="stylesheet">
     <link href="./plugins/aos-master/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet"/>
     <link href="./css/main.css" rel="stylesheet">
@@ -101,7 +103,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-2 mt-4 mt-md-0">
+                <div class="col-md-2 mt-4 mt-md-0 px2">
                     <ul>
                         <li>
                             <p class="fs-5 mb-3">自然療法</p>
@@ -129,7 +131,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-2 mt-4 mt-md-0">
+                <div class="col-md-2 mt-4 mt-md-0 px2">
                     <ul>
                         <li>
                             <p class="fs-5 mb-3">慈善義賣</p>
@@ -151,7 +153,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-2 mt-4 mt-md-0">
+                <div class="col-md-2 mt-4 mt-md-0 px2">
                     <ul>
                         <li>
                             <p class="fs-5 mb-3">綠能環保</p>
@@ -182,7 +184,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-2 mt-4 mt-md-0">
+                <div class="col-md-2 mt-4 mt-md-0 px2">
                     <ul>
                         <li>
                             <p class="fs-5 mb-3">珠寶與古玩</p>
@@ -216,7 +218,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-2 mt-4 mt-md-0">
+                <div class="col-md-2 mt-4 mt-md-0 px2">
                     <ul>
                         <li>
                             <p class="fs-5 mb-3">國畫藝術</p>
@@ -234,7 +236,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-2 mt-4 mt-md-0">
+                <div class="col-md-2 mt-4 mt-md-0 px2">
                     <ul>
                         <li>
                             <p class="fs-5 mb-3">沖泡園地</p>
@@ -259,7 +261,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-2 mt-4 mt-md-0">
+                <div class="col-md-2 mt-4 mt-md-0 px2">
                     <ul>
                         <li>
                             <p class="fs-5 mb-3">做愛心送健康</p>
@@ -281,7 +283,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-2 mt-4 mt-md-0">
+                <div class="col-md-2 mt-4 mt-md-0 px2">
                     <ul>
                         <li>
                             <p class="fs-5 mb-3">聽見幸福</p>
@@ -326,12 +328,10 @@
     <script src="./plugins/jquery/jquery-3.7.0.min.js" type="text/javascript"></script>
     <script src='./plugins/jquery/jquery.history.js'></script>
     <script src="./plugins/bootstrapv5/js/bootstrap.bundle.min.js"></script>
+    <script src="./plugins/slick-1.8.1/slick.min.js"></script>
     <script src="./plugins/aos-master/aos.js"></script>
-    <script src="./js/main.js"></script>
 
     <script>
-
-        //
         var loadedUrl = '';
         var index_url = "index";
         $.ajaxSetup({
@@ -343,7 +343,6 @@
 
         function initPage() {
             $.history.init(function (url) {
-                //loadPage(url == ""||undefined ? "main.html" : decodeURIComponent(url));
                 if (url == "" || undefined) {
                     loadPage(url == index_url);
                 } else {
@@ -370,6 +369,17 @@
             window.location.reload()
         }
 
+        function goBack() {
+            window.history.back();
+        }
+
+        function goTop() {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 'slow');
+        }
+
+        //footer
         $('.JQ_footer').click(function () {
             $(this).children('i').toggleClass('transform180')
             if ($(window).width() <= 768) {
@@ -378,6 +388,15 @@
                 $('.footer_flower,.footer_flower2').toggle();
             }           
         });
+        //內頁footer不要有sitemap    
+        $(document).ready(function() {
+            var currentUrl = window.location.href;
+            if (currentUrl.indexOf("eform_search_list.html") > -1) {
+            $("#login-btn").show();
+            }
+        });
+
+        
     </script>
 </body>
 

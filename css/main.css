@@ -105,7 +105,7 @@ body{
 }
 
 /*container.S*/
-/* @media (min-width: 1400px){
+@media (min-width: 1400px){
     .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
         max-width: 1140px;
     }
@@ -115,7 +115,7 @@ body{
         max-width: 1140px;
     }
     
-} */
+}
 /*container.E*/
 /***************共用的東西.end******************/
 
@@ -187,9 +187,8 @@ footer{
     background-color: var(--secondary);
 }
 footer ul li p,a{
-
     font-weight: 900;
-    font-size: 1rem;
+    font-size: .95rem;
     letter-spacing: 1px;
     line-height: 2rem;
     text-decoration: dashed;
@@ -234,7 +233,6 @@ footer .footer_flower2{
 }
 /*手機*/	
 @media  (max-width: 767px) {
-
     footer .footer_logo img{
         width: 5rem;
     }
@@ -247,7 +245,23 @@ footer .footer_flower2{
 
 
 /***************首頁.S****************/
-
+h2.title{
+    position: relative;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    font-size: 2rem;
+}
+h2.title::before{
+    content: '';
+    width: 35px;
+    height: 35px;
+    top: 0;
+    left: 0;
+    background-image: url('../images/title_flower.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 
 
 
