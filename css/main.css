@@ -62,6 +62,7 @@ a:hover {
 
 
 /***************共用的東西.start******************/
+
 *{
 	font-family: Microsoft JhengHei;
 }
@@ -114,7 +115,74 @@ body{
     bottom: 0;
     width: 100%;
 }
+.base .bird{
+    position: absolute;
+    object-fit: cover;
+    right:100px;
+    top: 50px;
+    width: 100px;
+}
+.base .tree_bird{
+    position: absolute;
+    object-fit: cover;
+    left: 0;
+    top: 250px;
+    width: 210px;
+}
+/*平板*/	
+@media screen and (min-width: 768px) and (max-width: 991.99px) {
+
+
+}
+
+/*手機*/	
+@media (max-width: 767px) {
+    .base .bird{
+        display: none;
+    }
+    .base .tree_bird{
+        display: none;;
+    }
+}
+
 /*背景.E*/
+
+/*輪播.S*/
+.slick-prev::before, .slick-next::before {
+    font-family: slick;
+    font-size: 30px;
+    line-height: 1;
+    opacity: 0.75;
+    color: var(--primary);
+    -webkit-font-smoothing: antialiased;
+}
+.slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 10px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '•';
+    text-align: center;
+    opacity: .25;
+    color: var(--primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: var(--primary);
+}
+/*手機*/	
+@media (max-width: 767px) {
+    .slick-prev::before, .slick-next::before {
+        display: none;
+    }
+}
+/*輪播.E*/
 
 /*container.S*/
 @media (min-width: 1400px){
@@ -129,13 +197,17 @@ body{
     
 }
 /*container.E*/
+
 /***************共用的東西.end******************/
+
+
 
 /***************header.start***************/
 .navbar{
 	background-color: #F5F4EC;
     padding: .8rem 0;
     box-shadow: 0 2px 8px rgb(202, 202, 202);
+    z-index: 999;
 }
 .navbar .logo_area{
     display: block;
@@ -149,9 +221,6 @@ body{
 	width: 360px;
 }
 .navbar .navbar-nav a{
-    padding: .8rem 1.5rem;
-    border-radius: 50px;
-    color: black;
     font-weight: 900;
     font-size: 1.1rem;
     letter-spacing: 1px;

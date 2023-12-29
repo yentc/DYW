@@ -23,7 +23,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/DYW/main.html#template/index.html">
                 <img src="./images/logo.png" alt="logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,7 +32,10 @@
             <div class="collapse navbar-collapse justify-content-md-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">首頁</a>
+                        <a class="nav-link active" aria-current="page" href="/DYW/main.html#template/index.html">首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/DYW/main.html#template/about.html">關於學會</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">自然療法</a>
@@ -57,6 +60,19 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">聽見幸福</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-user"></i> 王小明
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item text-start" href="#"><i class="fa fa-list-alt"></i> 會員資料</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-start" href="#"><i class="fa fa-sign-out"></i> 登出</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" title="購物車"><i class="fa fa-shopping-cart"></i></a>
                     </li>
                 </ul>
             </div>
@@ -364,20 +380,6 @@
             }
         }
 
-        function changeForm(gotoPage, locationUrl) {
-            $.history.load('template/' + gotoPage + '.html' + '?judgmentUrl?' + locationUrl);
-            window.location.reload()
-        }
-
-        function goBack() {
-            window.history.back();
-        }
-
-        function goTop() {
-            $('html, body').animate({
-                scrollTop: 0
-            }, 'slow');
-        }
 
         //footer
         $('.JQ_footer').click(function () {
@@ -387,15 +389,27 @@
             }else{
                 $('.footer_flower,.footer_flower2').toggle();
             }           
-        });
-        //內頁footer不要有sitemap    
+        }); 
+
+        //內頁footer不要有sitemap   
         $(document).ready(function() {
             var currentUrl = window.location.href;
-            if (currentUrl.indexOf("eform_search_list.html") > -1) {
-            $("#login-btn").show();
+            if (currentUrl.indexOf("index.html") > -1) {
+            $(".JQ_footer_menu").show();
+            $(".JQ_footer").show();
+            }else{
+                $(".JQ_footer_menu").hide();
+                $(".JQ_footer").hide();
+                $(".footer_flower").hide();
+                $(".footer_flower2").hide();
             }
         });
 
+        //header 點擊錨點換色
+        $('.nav-link').on('click',function () {
+            $('.nav-link').removeClass('active');
+            $(this).addClass('active');
+        })
         
     </script>
 </body>
