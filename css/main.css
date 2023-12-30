@@ -213,7 +213,6 @@ body{
     z-index: 999;
 }
 .navbar.inside{
-
     z-index: 998;
 }
 .navbar-light .navbar-nav .nav-link {
@@ -232,7 +231,7 @@ body{
 }
 .navbar .navbar-nav a{
     font-weight: 900;
-    font-size: 1.1rem;
+    font-size: 1rem;
     letter-spacing: 1px;
     text-align: center;
 }
