@@ -23,7 +23,6 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0;
 	font-size: 100%;
 	font-family: sans-serif ;
 }
@@ -69,7 +68,7 @@ a:hover {
 :root {
 	--primary: #8A2914;       
 	--secondary: #FFDF6B;       
-	--black: #2c2c2c;              
+	--black: #363636;              
 }
 
 .primary{
@@ -92,6 +91,7 @@ body{
 }
 
 
+
 /*凸排*/
 .indent-title-1{
     text-indent: -1rem;
@@ -108,12 +108,14 @@ body{
 /*背景.S*/
 .base{
     position: relative;
+    min-height: 80vh;
 }
 .base .bg{
     position: absolute;
     object-fit: cover;
     bottom: 0;
     width: 100%;
+    z-index: -1;
 }
 .base .bird{
     position: absolute;
@@ -121,6 +123,7 @@ body{
     right:100px;
     top: 50px;
     width: 100px;
+    z-index: -1;
 }
 .base .tree_bird{
     position: absolute;
@@ -128,6 +131,7 @@ body{
     left: 0;
     top: 250px;
     width: 210px;
+    z-index: -1;
 }
 /*平板*/	
 @media screen and (min-width: 768px) and (max-width: 991.99px) {
@@ -204,10 +208,16 @@ body{
 
 /***************header.start***************/
 .navbar{
-	background-color: #F5F4EC;
     padding: .8rem 0;
     box-shadow: 0 2px 8px rgb(202, 202, 202);
     z-index: 999;
+}
+.navbar.inside{
+
+    z-index: 998;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: var(--black);
 }
 .navbar .logo_area{
     display: block;

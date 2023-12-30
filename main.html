@@ -15,7 +15,6 @@
     <link href="./plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="./plugins/slick-1.8.1/slick.css" rel="stylesheet">
     <link href="./plugins/slick-1.8.1/slick-theme.css" rel="stylesheet">
-    <link href="./plugins/aos-master/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet"/>
     <link href="./css/main.css" rel="stylesheet">
 </head>
@@ -24,7 +23,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="/DYW/main.html#template/index.html">
-                <img src="./images/logo.png" alt="logo">
+                <img src="./images/logo.png" alt="logo" class="logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -38,7 +37,7 @@
                         <a class="nav-link" href="/DYW/main.html#template/about.html">關於學會</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">自然療法</a>
+                        <a class="nav-link" href="/DYW/main.html#template/nature.html">自然療法</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">慈善義賣</a>
@@ -78,6 +77,7 @@
             </div>
         </div>
     </nav>
+    
 
     <main id="main"></main>
 
@@ -345,7 +345,6 @@
     <script src='./plugins/jquery/jquery.history.js'></script>
     <script src="./plugins/bootstrapv5/js/bootstrap.bundle.min.js"></script>
     <script src="./plugins/slick-1.8.1/slick.min.js"></script>
-    <script src="./plugins/aos-master/aos.js"></script>
 
     <script>
         var loadedUrl = '';
@@ -393,22 +392,38 @@
 
         //內頁footer不要有sitemap   
         $(document).ready(function() {
+            // 初始化時執行一次
+            handleFooterVisibility();
+
+            // 監聽 hash 變化
+            window.onhashchange = function() {//onhashchange 事件在当前 URL 的锚部分(以 '#' 号为开始) 发生改变时触发 。
+                handleFooterVisibility();
+            };
+        });
+
+        function handleFooterVisibility() {
             var currentUrl = window.location.href;
             if (currentUrl.indexOf("index.html") > -1) {
-            $(".JQ_footer_menu").show();
-            $(".JQ_footer").show();
-            }else{
+                $(".JQ_footer_menu").show();
+                $(".JQ_footer").show();
+            } else {
                 $(".JQ_footer_menu").hide();
                 $(".JQ_footer").hide();
                 $(".footer_flower").hide();
                 $(".footer_flower2").hide();
             }
-        });
+        }
 
         //header 點擊錨點換色
-        $('.nav-link').on('click',function () {
-            $('.nav-link').removeClass('active');
+
+        $('#navbarNav .nav-link').on('click',function () {
+            $('#navbarNav .nav-link').removeClass('active');
             $(this).addClass('active');
+        })
+        
+        $('.logo').on('click',function () {
+            $('.nav-link').removeClass('active');
+            $('.nav-link:first').addClass('active');
         })
         
     </script>

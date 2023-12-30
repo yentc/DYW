@@ -1,11 +1,97 @@
+<nav class="navbar navbar-expand-lg navbar-light secondary py-1 inside">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav2" aria-controls="navbarNav2" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav2">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="javascript:changeContent('introduce')">學會介紹</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:changeContent('origin')">緣起‧宗旨</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">學會理念</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">總監的話</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">內部規章</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">響應與連署</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">學會證書</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">連絡我們</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">公文區</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 <section class="base pb-5">
     <img src="./images/bg.png" alt="" class="bg">
     <img src="./images/bird.png" alt="" class="bird">
     <img src="./images/tree_bird.png" alt="" class="tree_bird">
-    <div class="container ">
-        <div class="row my-5">
-            <div class="col-md-12 mb-5">
-                123
+    <div class="container bg-body rounded-3 shadow ">
+        <div class="my-5 p-3 content-item" id="introduce">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="title mb-3">
+                        <span class="ms-5">學會介紹</span>
+                    </h2>
+                    <p class="fw-bold lh-base">
+                        本學會為內政部核准的社會團體<span class="primary_text">(非宗教團體)</span>，積極研究天然無副作用的各種簡易自然療法，教導改善人體健康及生活環境，為政府的側寫單位。
+                        <br>
+                        <br>
+                        「道緣」：	追求人生真<span class="primary_text">「道」</span>理，創造幸褔快樂好<span class="primary_text">「緣」</span>起。
+                        <br>  <br>
+                        「五明」：	「內明」、「因明」、「醫方明」、「工巧明」、「聲明」。是結合了心靈、心理、生理、物理的科學統稱名詞。
+                        <br>  <br>
+                        「道緣五明」的涵意：
+                        <br> 
+                            就是依循一切事務的本質成因，在受到一些外在條件影響下，所體會出事物變化的定律、規則，靠著從「五明」的實作中去體會箇中的道理及巧妙變化，進而找出生命中的真理，及健康、幸福、快樂的人生。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="my-5 p-3 content-item" id="origin" style="display: none;">
+            <div class="row">
+                <div class="col-md-12 mb-5">
+                    <h2 class="title mb-3">
+                        <span class="ms-5">創立學會緣起</span>
+                    </h2>
+                    <div class="d-md-flex justify-content-between">
+                        <img src="./images/medicine.jpg" alt="" >
+                        <p class="fw-bold lh-base ms-3">
+                            我們創立學會的緣起，是感悟現今社會週遭的人們、親朋好友， 因教育上脫離實際生活，和環境上的飲食、日用品，都充滿了許多化學物， 影響自身的身體健康外，也因環境的各種染汙因素， 產生各種精神上、心理上、身體上的問題。
+                            <br>
+                            <br>
+                            <span class="primary_text">例如：心靈上的空虛，缺乏生活的情趣，造成許多憂鬱症等精神疾病。</span>
+                            <br>
+                            <br>
+                            以及大眾普遍依賴藥物，形成藥物濫用，造成藥毒後遺症和自身的免疫力下降， 導致國民的健康指數日益走下坡，國家醫療資源浪費， 影響國家、社會、家庭正面成長，因此才興起創立五明慈善教育學會的緣由。
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-12 mt-3">
+                    <h2 class="title mb-3">
+                        <span class="ms-5">學會依循宗旨</span>
+                    </h2>
+                    <div class="d-md-flex justify-content-between">
+                        <img src="./images/72.jpg" alt="" >
+                        <p class="fw-bold lh-base ms-3">
+                            廣邀各方專業人才，遵循大自然的宇宙定律，創立「五明」科學的各項研究及各種自然療法，以分享專業知識及經驗的教育理念，進而推廣落實解決現今社會問題、以及實際幫助孤、老、弱勢團體。	
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>  
     </div>
@@ -15,9 +101,18 @@
 
 
 <script>
-    //aos
-    AOS.init();
-    //滾動視差
 
-    
+
+    function changeContent(name) {
+         // 隱藏所有的 content-item
+            $('.content-item').hide();
+        // 根據傳入的 name 顯示相應的內容
+        $('#' + name).show();
+    }
+
+           //內頁黃色nav 點擊錨點換色
+        $('#navbarNav2 .nav-link').on('click',function () {
+            $('#navbarNav2 .nav-link').removeClass('active');
+            $(this).addClass('active');
+        })
 </script>
