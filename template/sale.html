@@ -1,0 +1,93 @@
+<nav class="navbar navbar-expand-xl navbar-light secondary py-1 inside">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav2" aria-controls="navbarNav2" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav2">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link "  href="#">道緣五明機油</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="javascript:changeContent('engine')">引擎保護劑</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">低因有機精品咖啡</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">玉仙養生老茶</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">酥油</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">高能量麥飯石</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<section class="base pb-5">
+    <img src="./images/bg.png" alt="" class="bg">
+    <img src="./images/bird.png" alt="" class="bird">
+    <img src="./images/tree_bird.png" alt="" class="tree_bird">
+    <div class="container bg-body rounded-3 shadow ">
+        <div class="my-5 p-3 content-item" id="qigong">
+            <div class="row">
+                <div class="col-md-7 mb-5">
+                    <h2 class="title mb-3">
+                        <span class="ms-5">引擎保護劑</span>
+                    </h2>
+                    <div class="main_carousel">
+                        <div>
+                            <img src="./images/pro_91_1.jpg" alt="" class="w-100">
+                        </div>
+                        <div>
+                            <img src="./images/pro_91_2.jpg" alt="" class="w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+</section>
+
+
+
+
+<script>
+
+    
+        $('.main_carousel').slick({
+            dots: true,
+            speed: 1000,
+            autoplay: true,
+            infinite: true,
+        });
+    
+    
+    function changeContent(name) {
+         // 隱藏所有的 content-item
+            $('.content-item').hide();
+        // 根據傳入的 name 顯示相應的內容
+            $('#' + name).show();
+            $('.main_carousel').slick({
+                dots: true,
+                speed: 1000,
+                autoplay: true,
+                infinite: true,
+            });
+    
+    }
+
+           //內頁黃色nav 點擊錨點換色
+        $('#navbarNav2 .nav-link').on('click',function () {
+            $('#navbarNav2 .nav-link').removeClass('active');
+            $(this).addClass('active');
+        })
+
+
+
+
+
+</script>

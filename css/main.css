@@ -154,7 +154,7 @@ body{
 /*輪播.S*/
 .slick-prev::before, .slick-next::before {
     font-family: slick;
-    font-size: 30px;
+    font-size: 25px;
     line-height: 1;
     opacity: 0.75;
     color: var(--primary);
@@ -276,7 +276,7 @@ footer{
     transform: translateX(-50%);
     background-color: var(--secondary);
 }
-footer ul li p,a{
+footer ul li p,footer ul li a{
     font-weight: 900;
     font-size: .95rem;
     letter-spacing: 1px;
