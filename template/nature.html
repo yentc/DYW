@@ -256,7 +256,15 @@
             asNavFor: '.slider-for',
             dots: true,
             // centerMode: true,
-            focusOnSelect: true
+            focusOnSelect: true,
+            responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,//一次顯示2個
+                }
+            },
+            ]
         }); 
 
         $('.sale_carousel').slick({
@@ -268,6 +276,14 @@
             autoplay: true,
             infinite: true,
             arrows: false,
+            responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,//一次顯示2個
+                }
+            },
+            ]
         });
     }
 

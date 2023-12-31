@@ -34,7 +34,7 @@
     <div class="container bg-body rounded-3 shadow ">
         <div class="my-5 p-3 content-item" id="qigong">
             <div class="row">
-                <div class="col-md-7 mb-5">
+                <div class="col-md-7 mb-3">
                     <h2 class="title mb-3">
                         <span class="ms-5">引擎保護劑</span>
                     </h2>
@@ -46,6 +46,43 @@
                             <img src="./images/pro_91_2.jpg" alt="" class="w-100">
                         </div>
                     </div>
+                </div>
+                <div class="col-md-5">
+                    <h3 class="primary_text fs-4 mb-5">
+                        義賣說明 : 
+                        <br>
+                        本會一切營收皆列於慈善教育基金
+                    </h3>
+                    <p class="fs-5 mb-3 text-decoration-line-through text-muted">原價：350元 / 120cc</p>
+                    <p class="fs-5">推廣價：<span class="primary_text fs-4 fw-bold">250元</span> / 120cc</p>
+                    <p class="mt-1 fs-5" style="margin-left: 82px;"><span class="primary_text fs-4 fw-bold">150元</span> / 50cc</p>
+                    <p class="mt-5 mb-4">願意提供見証資料者<span class="primary_text fw-bold">有折扣</span></p>
+                    <div class="d-flex align-items-center mb-5 ">
+                        <p class="">品項 ：</p>
+                        <div class="sale_items">250元 / 120cc</div>
+                        <div class="sale_items">150元 / 50cc</div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <button class="btn btn-outline-primary btn-lg">加入購物車</button>
+                        <button class="btn btn-primary ms-2 btn-lg">我要購買</button>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <p class="fs-4 fw-bold mb-3 d-flex align-items-center">
+                        商品介紹
+                        <audio controls="" autoplay="" style="width:200px; margin-left: 10px;"><source src="http://www.dyfv.org.tw/upload/data/pro/mp3/pro_91.mp3" type="audio/mpeg"></audio> 
+                    </p>
+                </div>
+                <div class="col-md-7">
+                    
+                    <p class="mb-3">介紹 : 以矽藻提煉、燃燒後與碳素結合成碳化矽</p>
+                    <p class="mb-3">六大效 : 提升辛烷值、保護汽門、清除積碳、除水氣、除鏽氣、磁化引擎</p>
+                    <p class="mb-3">使用說明 : 超級濃縮、汽油一公升只加1.2cc，可省20%以上的汽油</p>
+                    <p class="mb-3">一好三省 : 好空氣、省錢、省油、省時間</p>
+                </div>
+                <div class="col-md-5">
+                    <a href="" class="mb-3 d-block link-primary">1. 引擎保護劑介紹影片 <i class="fa fa-link" aria-hidden="true"></i></a>
+                    <a href="" class="d-block link-primary">2. 見證影片 <i class="fa fa-link" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>  
@@ -63,6 +100,7 @@
             speed: 1000,
             autoplay: true,
             infinite: true,
+            arrows: false,
         });
     
     
@@ -76,6 +114,7 @@
                 speed: 1000,
                 autoplay: true,
                 infinite: true,
+                arrows: false,
             });
     
     }
@@ -86,8 +125,11 @@
             $(this).addClass('active');
         })
 
-
-
+        //
+        $('.sale_items').click(function () {
+            $('.sale_items').removeClass('active');
+            $(this).addClass('active');
+        })
 
 
 </script>

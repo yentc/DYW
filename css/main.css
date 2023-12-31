@@ -241,6 +241,22 @@ body{
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
     color: var(--primary);
 }
+.cart{
+    position: relative;
+}
+.num{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: 11px;
+    color: white;
+    border-radius: 50%;
+    background-color: var(--primary);
+    font-weight: 700;
+    text-align: center;
+    z-index: 999;
+    
+}
 @media (min-width: 992px){
     .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: 1rem;
@@ -370,6 +386,35 @@ h2.title::before{
     background-size: contain;
     background-repeat: no-repeat;
 }
+.index .program_carousel img{
+    object-fit: cover;
+    height: 200px;
+}
+.index .sale_carousel .card{
+    height: 200px;
+}
+/***************首頁.E****************/
 
 
+/***************義賣頁.S****************/
+
+.sale_items{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1.5px solid grey;
+    cursor: pointer;
+    margin: 0 5px;
+    font-weight: 700;
+    color: grey;
+}
+.sale_items:hover{
+    border: 1.5px solid #0d6efd;
+    color: #0d6efd;
+}
+.sale_items.active{
+    border: 1.5px solid #0d6efd;
+    color: #0d6efd;
+}
+
+/***************義賣頁.Ｅ****************/
 

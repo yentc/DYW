@@ -2,7 +2,7 @@
     <img src="./images/bg.png" alt="" class="bg">
     <img src="./images/bird.png" alt="" class="bird">
     <img src="./images/tree_bird.png" alt="" class="tree_bird">
-    <div class="container ">
+    <div class="container index">
         <div class="row my-5">
             <div class="col-md-12 mb-5">
                 <div class="marquee">
@@ -132,6 +132,14 @@
         autoplay: true,
         infinite: true,
         arrows: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,//一次顯示2個
+                }
+            },
+            ]
     });
 
     //跑馬燈
