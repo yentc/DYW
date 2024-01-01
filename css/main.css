@@ -252,13 +252,15 @@ body{
     position: absolute;
     width: 15px;
     height: 15px;
-    right: 11px;
+    top: -8px;
+    right: -10px;
     color: white;
     border-radius: 50%;
     background-color: var(--primary);
     font-weight: 700;
     text-align: center;
     z-index: 999;
+    font-size: .9rem;
     
 }
 @media (min-width: 992px){
