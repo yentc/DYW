@@ -60,17 +60,17 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">聽見幸福</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item jQ_sign">
                         <a class="nav-link" href="/DYW/main.html#template/log.html"><i class="fa fa-sign-in"></i> 登入</a>
                     </li>
                     <!--登入後才出現下拉．Ｓ-->
-                    <li class="nav-item dropdown" style="display: none;">
+                    <li class="nav-item dropdown jQ_signed" style="display: none;">
                         <a class="nav-link dropdown-toggle" href="＃" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fa fa-user"></i>王小明
                         </a>
                         
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item text-start" href="/DYW/main.html#template/member.html"><i class="fa fa-list-alt"></i> 會員資料</a></li>
+                            <li><a class="dropdown-item text-start JQ_sign_in" href="/DYW/main.html#template/member.html"><i class="fa fa-list-alt"></i> 會員資料</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item text-start" href="#"><i class="fa fa-sign-out"></i> 登出</a></li>
                         </ul>
@@ -78,7 +78,7 @@
                     <!--登入後才出現下拉．Ｅ-->
                     <li class="nav-item">
                         <div class="num">1</div>
-                        <a class="nav-link fs-5 cart" href="#" title="購物車"><i class="fa fa-shopping-cart"></i></a>
+                        <a class="nav-link fs-5 cart" href="/DYW/main.html#template/cart.html" title="購物車"><i class="fa fa-shopping-cart"></i></a>
                     </li>
                 </ul>
             </div>
@@ -380,6 +380,13 @@
                 $('#main').html('').load(url, function (response, status, xhr) {
                     loadedUrl = url;
                     $('html, body').scrollTop(0);
+
+                      //會員登入後header會員置換
+                        $('.JQ_sign_in').click(function () {
+                            $('.jQ_signed').show();
+                            $('.jQ_sign').hide();
+                        })
+        
                 });
             } else {
                 $.history.load('template/' + index_url + '.html');
@@ -432,7 +439,9 @@
             $('.nav-link').removeClass('active');
             $('.nav-link:first').addClass('active');
         })
-        
+
+
+  
     </script>
 </body>
 

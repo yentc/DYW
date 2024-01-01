@@ -3,12 +3,50 @@
     <img src="./images/bg.png" alt="" class="bg">
     <img src="./images/bird.png" alt="" class="bird">
     <img src="./images/tree_bird.png" alt="" class="tree_bird">
-    <div class="container bg-body rounded-3 shadow mt-5 p-3">
+    <div class="container bg-body rounded-3 shadow mt-5 p-3" style="max-width: 600px;">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="title mb-3">
-                    <span class="ms-5">會員登入</span>
-                </h2>
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">會員登入</button>
+                        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">註冊會員</button>
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <div class="mt-4 mb-3">
+                            <label for="" class="form-label">帳號</label>
+                            <input type="text" class="form-control" id="" placeholder="請輸入電子郵件/手機">
+                        </div>
+                        <div class="mb-5">
+                            <label for="" class="form-label">密碼</label>
+                            <input type="password" class="form-control" id="" placeholder="請輸入密碼">
+                        </div>
+                        <a href="/DYW/main.html#template/member.html" class="btn primary text-white d-block JQ_sign_in">登入會員 </a>
+                    </div>
+                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                        <div class="mt-4 mb-3">
+                            <label for="" class="form-label"><span class="primary_text">*</span>手機</label>
+                            <div class="d-flex align-items-center">
+                                <input type="email" class="form-control" id="" placeholder="(範例0928XXXXXX)">
+                                <button class="btn btn-secondary text-nowrap ms-1">發送簡訊驗證碼</button>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label"><span class="primary_text">*</span>密碼</label>
+                            <input type="password" class="form-control" id="" placeholder="請輸入密碼(6碼至15碼英數字)">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label"><span class="primary_text">*</span>確認密碼</label>
+                            <input type="password"class="form-control" id="" placeholder="請再次輸入密碼">
+                        </div>
+                        <div class="mb-5">
+                            <label for="" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="" placeholder="請輸入Email">
+                        </div>
+                        <a href="" class="btn primary text-white d-block ">註冊會員</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -19,4 +57,5 @@
 
 <script>
 
+        
 </script>
